@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.FeverFragment">
+
+
+
+
+    <!-- 오른쪽에 정렬된 텍스트뷰 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+
+        <ScrollView
+            android:layout_width="315dp"
+            android:layout_height="394dp"
+            android:gravity="center"
+            android:layout_marginTop="100dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/Fbutton1"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:text="약A" />
+
+                <Button
+                    android:id="@+id/Fbutton2"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:text="약B" />
+
+                <Button
+                    android:id="@+id/Fbutton3"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:text="약C" />
+
+                <Button
+                    android:id="@+id/Fbutton4"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:text="약D" />
+
+                <Button
+                    android:id="@+id/Fbutton5"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:text="약E" />
+
+                <Button
+                    android:id="@+id/Fbutton6"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:text="약F" />
+
+                <Button
+                    android:id="@+id/Fbutton7"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:text="약G" />
+
+                <Button
+                    android:id="@+id/Fbutton8"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:text="약H" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="162dp"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="end"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025">
+
+        <Button
+            android:id="@+id/Fbutton0"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="뒤로가기" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="헬퍼"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이런곳에 필요하신 약이 있어요"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
