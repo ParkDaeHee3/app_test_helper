@@ -96,10 +96,6 @@
                 android:layout_height="70dp"
                 android:text="기타 증상" />
         </LinearLayout>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnmap"/>
 
     </LinearLayout>
 

@@ -38,7 +38,6 @@ public class HomeFragment extends Fragment {
         final Button button8 = binding.button8;
         final Button button9 = binding.button9;
         final Button button10 = binding.button10;
-        final Button btnmap = binding.btnmap;
 
 
         // button1에 리스너 설정
@@ -164,17 +163,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        btnmap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager()
-                        .beginTransaction().addToBackStack(null);
-
-                MapFragment headacheFragment = new MapFragment();
-                transaction.replace(R.id.fragment_home, headacheFragment);
-                transaction.commit();
-            }
-        });
 
         //homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
