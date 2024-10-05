@@ -4,22 +4,21 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.example.app_test_helper.databinding.FragmentHeadacheBinding;
+import com.example.app_test_helper.databinding.FragmentTirednessBinding;
 
-public class HeadacheFragment extends Fragment {
+public class TirednessFragment extends Fragment {
 
-    private FragmentHeadacheBinding binding;
+    private FragmentTirednessBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentHeadacheBinding.inflate(inflater, container, false);
+        binding = FragmentTirednessBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         return root;

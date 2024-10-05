@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HeadacheFragment">
+    tools:context=".ui.home.ToothacheFragment">
 
 
 
@@ -14,14 +14,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp"
-        android:background="@color/white"
         android:gravity="center"
         android:orientation="vertical"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
+
 
 
 
@@ -39,49 +40,49 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/Hbutton1"
+                    android:id="@+id/Tobutton1"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
                     android:text="약A" />
 
                 <Button
-                    android:id="@+id/Hbutton2"
+                    android:id="@+id/Tobutton2"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
                     android:text="약B" />
 
                 <Button
-                    android:id="@+id/Hbutton3"
+                    android:id="@+id/Tobutton3"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:text="두통약C" />
+                    android:text="치통약C" />
 
                 <Button
-                    android:id="@+id/Hbutton4"
+                    android:id="@+id/Tobutton4"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
                     android:text="약D" />
 
                 <Button
-                    android:id="@+id/Hbutton5"
+                    android:id="@+id/Tobutton5"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
                     android:text="약E" />
 
                 <Button
-                    android:id="@+id/Hbutton6"
+                    android:id="@+id/Tobutton6"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
                     android:text="약F" />
 
                 <Button
-                    android:id="@+id/Hbutton7"
+                    android:id="@+id/Tobutton7"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
                     android:text="약G" />
 
                 <Button
-                    android:id="@+id/Hbutton8"
+                    android:id="@+id/Tobutton8"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
                     android:text="약H" />
@@ -90,6 +91,8 @@
 
 
     </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="240dp"
@@ -104,7 +107,7 @@
         app:layout_constraintVertical_bias="0.025">
 
         <Button
-            android:id="@+id/Hbutton0"
+            android:id="@+id/Tobutton0"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
