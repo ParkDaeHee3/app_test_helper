@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_History"
+        android:id="@+id/nav_history"
         android:name="com.example.app_test_helper.ui.history.HistoryFragment"
         android:label="@string/menu_history"
-        tools:layout="@layout/fragment_history" />
+        tools:layout="@layout/fragment_history"/>
 
     <fragment
         android:id="@+id/nav_notifications"
