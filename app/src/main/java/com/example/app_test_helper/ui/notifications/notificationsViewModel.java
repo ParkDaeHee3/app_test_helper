@@ -1,16 +1,17 @@
-package com.example.app_test_helper.ui.slideshow;
+package com.example.app_test_helper.ui.notifications;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+
+public class notificationsViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public SlideshowViewModel() {
+    public notificationsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is home fragment");
     }
 
     public LiveData<String> getText() {
