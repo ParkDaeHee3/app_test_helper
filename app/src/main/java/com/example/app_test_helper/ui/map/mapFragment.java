@@ -1,5 +1,6 @@
 package com.example.app_test_helper.ui.map;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.app_test_helper.R;
 import com.example.app_test_helper.databinding.FragmentMapBinding;
 import com.kakao.vectormap.KakaoMap;
 import com.kakao.vectormap.KakaoMapReadyCallback;
@@ -19,6 +21,14 @@ import com.kakao.vectormap.MapLifeCycleCallback;
 import com.kakao.vectormap.MapView;
 import com.kakao.vectormap.camera.CameraUpdate;
 import com.kakao.vectormap.camera.CameraUpdateFactory;
+import com.kakao.vectormap.label.Label;
+import com.kakao.vectormap.label.LabelLayer;
+import com.kakao.vectormap.label.LabelOptions;
+import com.kakao.vectormap.label.LabelStyle;
+import com.kakao.vectormap.label.LabelStyles;
+import com.kakao.vectormap.label.LabelTextBuilder;
+import com.kakao.vectormap.label.LabelTextStyle;
+import com.kakao.vectormap.label.LabelTransition;
 
 public class mapFragment extends Fragment {
 
@@ -63,8 +73,22 @@ public class mapFragment extends Fragment {
                 // 정상적으로 인증이 완료되었을 때 호출
                 // KakaoMap 객체를 얻어 옵니다.
                 kakaoMap = map;
-                CameraUpdate cameraUpdate = CameraUpdateFactory.newCenterPosition(LatLng.from(35.967992, 126.958729));
+                CameraUpdate cameraUpdate = CameraUpdateFactory.newCenterPosition(LatLng.from(35.963727, 126.959107));
                 kakaoMap.moveCamera(cameraUpdate);
+
+                LabelStyle style = LabelStyle.from(R.drawable.ic_map_pin).setTextStyles(LabelTextStyle.from(37, Color.parseColor("#DB5461"),2, Color.DKGRAY)).setApplyDpScale(false);
+
+// 2. LabelOptions 생성하기
+                LabelTextBuilder labelTextBuilder = new LabelTextBuilder();
+                labelTextBuilder.setTexts("신동 A 약국");
+                LabelOptions options = LabelOptions.from(LatLng.from(35.963727,126.959107))
+                        .setStyles(style).setTexts(labelTextBuilder);
+
+// 3. LabelLayer 가져오기 (또는 커스텀 Layer 생성)
+                LabelLayer layer = kakaoMap.getLabelManager().getLayer();
+
+// 4. LabelLayer 에 LabelOptions 을 넣어 Label 생성하기
+                Label label = layer.addLabel(options);
 
 //                RestApi restApi = retrofit.create(RestApi.class);
 //                Call<List<map>> call = restApi.getMap();
