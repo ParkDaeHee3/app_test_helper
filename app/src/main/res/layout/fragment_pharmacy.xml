@@ -43,49 +43,49 @@
                     android:id="@+id/Fbutton1"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:text="약A" />
+                    android:text="약국A" />
 
                 <Button
                     android:id="@+id/Fbutton2"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:text="약B" />
+                    android:text="약국A" />
 
                 <Button
                     android:id="@+id/Fbutton3"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:text="약C" />
+                    android:text="약국A" />
 
                 <Button
                     android:id="@+id/Fbutton4"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:text="약D" />
+                    android:text="약국A" />
 
                 <Button
                     android:id="@+id/Fbutton5"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:text="약E" />
+                    android:text="약국A" />
 
                 <Button
                     android:id="@+id/Fbutton6"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:text="약F" />
+                    android:text="약국A" />
 
                 <Button
                     android:id="@+id/Fbutton7"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:text="약G" />
+                    android:text="약국A" />
 
                 <Button
                     android:id="@+id/Fbutton8"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:text="약H" />
+                    android:text="약국A" />
             </LinearLayout>
         </ScrollView>
 
