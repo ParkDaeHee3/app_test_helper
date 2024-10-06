@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_home"
@@ -7,23 +8,56 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <!-- 버튼들 -->
     <LinearLayout
+        android:id="@+id/textView_subtitle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/subtitle_padding_top"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+        android:id="@+id/content_page_subtitle_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/content_page_subtitle_text_1"
+        android:textSize="@dimen/subtitle_text_size" />
+
+    <ImageView
+        android:id="@+id/line_1"
+        android:layout_width="@dimen/line_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_margin_top"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_line_1" />
+
+    </LinearLayout>
+
+
+    <!-- 카드 버튼 섹션 -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:gravity="center"
         android:orientation="horizontal"
-        android:background="@color/white"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/textView_subtitle"
+        app:layout_constraintVertical_bias="0.0">
 
         <!-- 왼쪽 버튼들 -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -58,11 +92,11 @@
                 android:text="피로" />
         </LinearLayout>
 
-
         <!-- 오른쪽 버튼들 -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -97,34 +131,6 @@
                 android:text="기타 증상" />
         </LinearLayout>
 
-    </LinearLayout>
-
-    <!-- 오른쪽에 정렬된 텍스트뷰 -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginEnd="12dp"
-        android:gravity="end"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025">
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="헬퍼"
-            android:textSize="50sp" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="어디가 아픈가요?"
-            android:textSize="18sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
