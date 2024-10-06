@@ -1,3 +1,25 @@
 <resources>
-    <dimen name="fab_margin">200dp</dimen>
+    <!-- 기본 화면 여백 -->
+    <dimen name="activity_horizontal_margin">32dp</dimen> <!-- 수평 여백 (큰 화면) -->
+    <dimen name="activity_vertical_margin">24dp</dimen> <!-- 수직 여백 (큰 화면) -->
+
+    <!-- 네비게이션 헤더 크기 -->
+    <dimen name="nav_header_vertical_spacing">12dp</dimen> <!-- 헤더 수직 간격 (큰 화면) -->
+    <dimen name="nav_header_height">200dp</dimen> <!-- 헤더 높이 (큰 화면) -->
+
+    <!-- 버튼 규격 -->
+    <dimen name="btn_height">60dp</dimen> <!-- 버튼 높이 (큰 화면) -->
+    <dimen name="btn_width">160dp</dimen> <!-- 버튼 너비 (큰 화면) -->
+    <dimen name="btn_text_size">18sp</dimen> <!-- 버튼 텍스트 크기 (큰 화면) -->
+    <dimen name="btn_padding_vertical">16dp</dimen> <!-- 버튼 내부 패딩 (상하, 큰 화면) -->
+    <dimen name="btn_padding_horizontal">32dp</dimen> <!-- 버튼 내부 패딩 (좌우, 큰 화면) -->
+    <dimen name="btn_margin">24dp</dimen> <!-- 버튼 간격 (큰 화면) -->
+
+    <!-- 플로팅 액션 버튼 크기 -->
+    <dimen name="fab_size">64dp</dimen> <!-- 일반 FAB 크기 (큰 화면) -->
+    <dimen name="fab_size_mini">48dp</dimen> <!-- 작은 크기 FAB (큰 화면) -->
+
+    <!-- 플로팅 액션 버튼(FAB) 마진 -->
+    <dimen name="fab_margin">200dp</dimen> <!-- FAB 마진 (큰 화면) -->
+
 </resources>

@@ -23,7 +23,6 @@
     <string name="menu_gallery">갤러리</string>
     <string name="menu_slideshow">슬라이드</string>
 
-
     <!-- [대시보드 관련 문자열] -->
     <string name="title_dashboard">대쉬보드</string>
 
@@ -37,18 +36,11 @@
     <string name="drawer_open">메뉴열기</string>
     <string name="drawer_close">메뉴닫기</string>
 
-    <!--[로그인 관련 문자열] -->
-    <string name="login_text">Login</string>
-    <string name="username_hint">Username</string>
-    <string name="password_hint">Password</string>
-    <string name="login_button_text">Login</string>
-    <string name="signup_text">Not yet registered? SignUp Now</string>
-    <string name="menu_login">Login</string>
 
-
-
-
-
+    <!--[content_page_subtitle_text 문자열]-->
+    <string name="content_page_subtitle_text_1">어디가 아픈가요?</string>
+    <string name="content_page_subtitle_text_2">여기엔 이게 도움이 될거에요</string>
+    <string name="content_page_subtitle_text_3">내 근처 이곳에 있어요</string>
 
     <!--각 string 추가 시, 영역별 정리 필요!!!!!!!-->
 
