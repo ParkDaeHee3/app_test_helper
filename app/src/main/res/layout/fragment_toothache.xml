@@ -38,53 +38,61 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical">
-
+                <!-- 46줄 알약 그림 -->
                 <Button
                     android:id="@+id/Tobutton1"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약A" />
 
                 <Button
                     android:id="@+id/Tobutton2"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약B" />
 
                 <Button
                     android:id="@+id/Tobutton3"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="치통약C" />
 
                 <Button
                     android:id="@+id/Tobutton4"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약D" />
 
                 <Button
                     android:id="@+id/Tobutton5"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약E" />
 
                 <Button
                     android:id="@+id/Tobutton6"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약F" />
 
                 <Button
                     android:id="@+id/Tobutton7"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약G" />
 
                 <Button
                     android:id="@+id/Tobutton8"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약H" />
             </LinearLayout>
         </ScrollView>
