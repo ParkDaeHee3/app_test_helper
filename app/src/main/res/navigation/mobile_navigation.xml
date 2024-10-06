@@ -15,13 +15,27 @@
         android:id="@+id/nav_history"
         android:name="com.example.app_test_helper.ui.history.HistoryFragment"
         android:label="@string/menu_history"
-        tools:layout="@layout/fragment_history"/>
+        tools:layout="@layout/fragment_history" />
 
     <fragment
         android:id="@+id/nav_notifications"
         android:name="com.example.app_test_helper.ui.notifications.notificationsFragment"
         android:label="@string/menu_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notifications" >
+
+        <!-- notificationsFragment에서 notificationsSetFragment로 이동하는 액션 추가 -->
+        <action
+            android:id="@+id/action_notificationsFragment_to_notificationsSetFragment"
+            app:destination="@id/nav_notifications_set" />
+    </fragment>
+
+    <!-- notificationsSetFragment 정의 추가 -->
+    <fragment
+        android:id="@+id/nav_notifications_set"
+        android:name="com.example.app_test_helper.ui.notifications.notificationsSetFragment"
+        android:label="Notifications Set"
+        tools:layout="@layout/fragment_notifications_set" />
+
     <fragment
         android:id="@+id/nav_map"
         android:name="com.example.app_test_helper.ui.map.PharmacyFragment"
