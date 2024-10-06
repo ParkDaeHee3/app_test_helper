@@ -42,6 +42,15 @@
     <string name="content_page_subtitle_text_2">여기엔 이게 도움이 될거에요</string>
     <string name="content_page_subtitle_text_3">내 근처 이곳에 있어요</string>
 
+    <!--[login_page 문자열]-->
+    <string name="login_text">Login</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button_text">Login</string>
+    <string name="signup_text">Not yet registered? SignUp Now</string>
+
+
+
     <!--각 string 추가 시, 영역별 정리 필요!!!!!!!-->
 
 </resources>
