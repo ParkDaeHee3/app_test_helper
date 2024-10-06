@@ -15,6 +15,10 @@
     <dimen name="btn_padding_horizontal">24dp</dimen> <!-- 버튼 내부 패딩 (좌우) -->
     <dimen name="btn_margin">16dp</dimen> <!-- 버튼 간격 (마진) -->
 
+    <!-- 카드 세션 규격 -->
+    <dimen name="btn_card_height">95dp</dimen> <!-- 카드 섹션 높이 -->
+    <dimen name="btn_card_width">219dp</dimen> <!-- 카드 섹션 너비 -->
+    <dimen name="btn_card_text_size">16sp</dimen> <!-- 카드 섹션 텍스트 크기 예시 -->
 
     <!-- 플로팅 액션 버튼(FAB) 마진 -->
     <dimen name="fab_margin">16dp</dimen> <!-- FAB 마진 -->
