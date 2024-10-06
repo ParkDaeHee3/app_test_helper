@@ -1,0 +1,7 @@
+<!-- res/drawable/square_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#ffffff"/> <!-- 정사각형의 색상 설정 -->
+    <size
+        android:width="50dp"/>  <!-- 정사각형의 너비 -->
+        <corners android:radius="10dp"/> <!-- 정사각형 모서리를 둥글게 할 수 있는 반지름 설정 -->
+</shape>

@@ -57,48 +57,56 @@
                     android:id="@+id/Hbutton1"
                     android:layout_width="@dimen/btn_card_width"
                     android:layout_height="@dimen/btn_card_height"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="두통약 테스트" />
 
                 <Button
                     android:id="@+id/Hbutton2"
                     android:layout_width="@dimen/btn_card_width"
                     android:layout_height="@dimen/btn_card_height"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약B" />
 
                 <Button
                     android:id="@+id/Hbutton3"
                     android:layout_width="@dimen/btn_card_width"
                     android:layout_height="@dimen/btn_card_height"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="두통약C" />
 
                 <Button
                     android:id="@+id/Hbutton4"
                     android:layout_width="@dimen/btn_card_width"
                     android:layout_height="@dimen/btn_card_height"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약D" />
 
                 <Button
                     android:id="@+id/Hbutton5"
                     android:layout_width="@dimen/btn_card_width"
                     android:layout_height="@dimen/btn_card_height"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약E" />
 
                 <Button
                     android:id="@+id/Hbutton6"
                     android:layout_width="@dimen/btn_card_width"
                     android:layout_height="@dimen/btn_card_height"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약F" />
 
                 <Button
                     android:id="@+id/Hbutton7"
                     android:layout_width="@dimen/btn_card_width"
                     android:layout_height="@dimen/btn_card_height"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약G" />
 
                 <Button
                     android:id="@+id/Hbutton8"
                     android:layout_width="@dimen/btn_card_width"
                     android:layout_height="@dimen/btn_card_height"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약H" />
 
             </LinearLayout>

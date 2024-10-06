@@ -42,48 +42,56 @@
                     android:id="@+id/Ebutton1"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약A" />
 
                 <Button
                     android:id="@+id/Ebutton2"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약B" />
 
                 <Button
                     android:id="@+id/Ebutton3"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="기타약C" />
 
                 <Button
                     android:id="@+id/Ebutton4"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약D" />
 
                 <Button
                     android:id="@+id/Ebutton5"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약E" />
 
                 <Button
                     android:id="@+id/Ebutton6"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약F" />
 
                 <Button
                     android:id="@+id/Ebutton7"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약G" />
 
                 <Button
                     android:id="@+id/Ebutton8"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약H" />
             </LinearLayout>
         </ScrollView>
