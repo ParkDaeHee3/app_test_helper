@@ -42,18 +42,21 @@
                     android:id="@+id/Sbutton1"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약A" />
 
                 <Button
                     android:id="@+id/Sbutton2"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약B" />
 
                 <Button
                     android:id="@+id/Sbutton3"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="복통약C" />
 
                 <Button
@@ -66,24 +69,28 @@
                     android:id="@+id/Sbutton5"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약E" />
 
                 <Button
                     android:id="@+id/Sbutton6"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약F" />
 
                 <Button
                     android:id="@+id/Sbutton7"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약G" />
 
                 <Button
                     android:id="@+id/Sbutton8"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
+                    android:drawableLeft="@drawable/medicinexml"
                     android:text="약H" />
             </LinearLayout>
         </ScrollView>

@@ -33,5 +33,13 @@
     <dimen name="subtitle_padding_top">16dp</dimen>
     <dimen name="subtitle_text_size">22sp</dimen> <!-- dp 대신 sp를 사용해야 올바른 텍스트 크기가 적용됩니다 -->
 
+    <!-- bottom_navView의 스타일 정의 -->
+    <style name="BottomNavigationItem" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+
+
 
 </resources>
