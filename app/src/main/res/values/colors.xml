@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!--컬러 코드 참조 링크 https://yeun.github.io/open-color-->
+
+    <!--메인, 서브 컬러 코드 추가 시 <컬러명="sub_용도명_색상명"> 컬러번호 주석 양식 지키세요.-->
+    <!--다른 기능 추가 시 경고 발생 시 사용 코드 양식 참고하세요.-->
+        <!--메인 컬러-->
+        <color name="main_theme_yellow">#ffd43b</color> <!--yellow4-->
+        <color name="main_title_yellow">#ffe066</color> <!--yellow3-->
+        <color name="main_side_yellow">#fff3bf</color> <!--yellow1-->
+
+        <!--서브 컬러-->
+        <color name="sub_title_blue">#a5d8ff</color> <!--blue2-->
+        <color name="sub_side_blue">#d0ebff</color> <!--blue1-->
+
+        <!--경고 발생 시 사용-->
+        <color name="error_red">#f03e3e</color> <!--red7-->
+
+        <!--기본 폰트 색상 지정-->
+        <color name="font_black">#FF000000</color>
+        <color name="font_white">#FFFFFFFF</color>
+
+        <!--임시 땜빵-->
+        <color name="white">#FFFFFFFF</color>
+
 </resources>

@@ -1,14 +1,42 @@
 <resources>
+    <!-- [앱 기본 정보] -->
     <string name="app_name">app_test_helper</string>
+
+    <!-- [홈 화면 관련 문자열] -->
+    <string name="title_home">홈</string>
+
+    <!--[드로어 관련 문자열]-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--[드로어 관련 문자열]-->
     <string name="nav_header_title">Helper</string>
     <string name="nav_header_subtitle">Helper_App@helper.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!--[메뉴 관련 문자열]-->
     <string name="menu_home">Home</string>
     <string name="menu_history">History</string>
     <string name="menu_notifications">Reminder</string>
     <string name="menu_map">Map</string>
+    <string name="menu_gallery">갤러리</string>
+    <string name="menu_slideshow">슬라이드</string>
+
+
+    <!-- [대시보드 관련 문자열] -->
+    <string name="title_dashboard">대쉬보드</string>
+
+    <!-- [맵 화면 관련 문자열] -->
+    <string name="title_mapboard">맵</string>
+
+    <!-- [알림 화면 관련 문자열] -->
+    <string name="title_notifications">알람</string>
+
+    <!-- [사이드바 관련 문자열] -->
+    <string name="drawer_open">메뉴열기</string>
+    <string name="drawer_close">메뉴닫기</string>
+
+    <!--각 string 추가 시, 영역별 정리 필요!!!!!!!-->
+
 </resources>
