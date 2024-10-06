@@ -29,7 +29,7 @@ public class PharmacyFragment extends Fragment {
         binding = FragmentPharmacyBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        Button bnt1 = binding.Fbutton1;
+        Button bnt1 = binding.Hbutton1;
 
         bnt1.setOnClickListener(new View.OnClickListener() {
             @Override
