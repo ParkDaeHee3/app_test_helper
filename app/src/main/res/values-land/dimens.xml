@@ -1,3 +1,25 @@
 <resources>
-    <dimen name="fab_margin">48dp</dimen>
+    <!-- 기본 화면 여백 -->
+    <dimen name="activity_horizontal_margin">24dp</dimen> <!-- 수평 여백 (가로 모드) -->
+    <dimen name="activity_vertical_margin">16dp</dimen> <!-- 수직 여백 (가로 모드) -->
+
+    <!-- 네비게이션 헤더 크기 -->
+    <dimen name="nav_header_vertical_spacing">10dp</dimen> <!-- 헤더 수직 간격 (가로 모드) -->
+    <dimen name="nav_header_height">180dp</dimen> <!-- 헤더 높이 (가로 모드) -->
+
+    <!-- 버튼 규격 -->
+    <dimen name="btn_height">52dp</dimen> <!-- 버튼 높이 (가로 모드) -->
+    <dimen name="btn_width">130dp</dimen> <!-- 버튼 너비 (가로 모드) -->
+    <dimen name="btn_text_size">16sp</dimen> <!-- 버튼 텍스트 크기 (가로 모드) -->
+    <dimen name="btn_padding_vertical">14dp</dimen> <!-- 버튼 내부 패딩 (상하, 가로 모드) -->
+    <dimen name="btn_padding_horizontal">28dp</dimen> <!-- 버튼 내부 패딩 (좌우, 가로 모드) -->
+    <dimen name="btn_margin">20dp</dimen> <!-- 버튼 간격 (가로 모드) -->
+
+    <!-- 플로팅 액션 버튼 크기 -->
+    <dimen name="fab_size">60dp</dimen> <!-- 일반 FAB 크기 (가로 모드) -->
+    <dimen name="fab_size_mini">44dp</dimen> <!-- 작은 크기 FAB (가로 모드) -->
+
+    <!-- 플로팅 액션 버튼(FAB) 마진 -->
+    <dimen name="fab_margin">48dp</dimen> <!-- FAB 마진 (가로 모드) -->
+
 </resources>
