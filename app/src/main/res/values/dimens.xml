@@ -27,4 +27,11 @@
     <dimen name="fab_size">56dp</dimen> <!-- 일반 FAB 크기 -->
     <dimen name="fab_size_mini">40dp</dimen> <!-- 작은 크기 FAB -->
 
+    <!-- 텍스트뷰 및 구분선 레이아웃에 사용되는 크기 및 여백 -->
+    <dimen name="line_width">340dp</dimen>
+    <dimen name="line_margin_top">16dp</dimen>
+    <dimen name="subtitle_padding_top">16dp</dimen>
+    <dimen name="subtitle_text_size">22sp</dimen> <!-- dp 대신 sp를 사용해야 올바른 텍스트 크기가 적용됩니다 -->
+
+
 </resources>
