@@ -38,6 +38,9 @@
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
     </style>
+    <!--리스트 버튼 크기-->
+    <dimen name="button_width">150dp</dimen>
+    <dimen name="button_height">50dp</dimen>
 
 
 

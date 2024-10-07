@@ -25,7 +25,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/content_page_subtitle_text_2"
-            android:textSize="@dimen/subtitle_text_size" />
+            android:textSize="@dimen/subtitle_text_size"
+            android:textColor="@color/black" />
 
         <ImageView
             android:id="@+id/line_1"
@@ -34,83 +35,331 @@
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/line_margin_top"
             app:srcCompat="@drawable/ic_line_1" />
-
-        <!-- 스크롤 뷰 -->
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:scrollbars="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView_subtitle"> <!-- textView_subtitle 아래로 배치 -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <!-- 버튼 양식 간소화 -->
-                <Button
-                    android:id="@+id/Hbutton1"
-                    android:layout_width="@dimen/btn_card_width"
-                    android:layout_height="@dimen/btn_card_height"
-                    android:drawableLeft="@drawable/medicinexml"
-                    android:text="두통약 테스트" />
-
-                <Button
-                    android:id="@+id/Hbutton2"
-                    android:layout_width="@dimen/btn_card_width"
-                    android:layout_height="@dimen/btn_card_height"
-                    android:drawableLeft="@drawable/medicinexml"
-                    android:text="약B" />
-
-                <Button
-                    android:id="@+id/Hbutton3"
-                    android:layout_width="@dimen/btn_card_width"
-                    android:layout_height="@dimen/btn_card_height"
-                    android:drawableLeft="@drawable/medicinexml"
-                    android:text="두통약C" />
-
-                <Button
-                    android:id="@+id/Hbutton4"
-                    android:layout_width="@dimen/btn_card_width"
-                    android:layout_height="@dimen/btn_card_height"
-                    android:drawableLeft="@drawable/medicinexml"
-                    android:text="약D" />
-
-                <Button
-                    android:id="@+id/Hbutton5"
-                    android:layout_width="@dimen/btn_card_width"
-                    android:layout_height="@dimen/btn_card_height"
-                    android:drawableLeft="@drawable/medicinexml"
-                    android:text="약E" />
-
-                <Button
-                    android:id="@+id/Hbutton6"
-                    android:layout_width="@dimen/btn_card_width"
-                    android:layout_height="@dimen/btn_card_height"
-                    android:drawableLeft="@drawable/medicinexml"
-                    android:text="약F" />
-
-                <Button
-                    android:id="@+id/Hbutton7"
-                    android:layout_width="@dimen/btn_card_width"
-                    android:layout_height="@dimen/btn_card_height"
-                    android:drawableLeft="@drawable/medicinexml"
-                    android:text="약G" />
-
-                <Button
-                    android:id="@+id/Hbutton8"
-                    android:layout_width="@dimen/btn_card_width"
-                    android:layout_height="@dimen/btn_card_height"
-                    android:drawableLeft="@drawable/medicinexml"
-                    android:text="약H" />
-
-            </LinearLayout>
-        </ScrollView>
     </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- 스크롤 뷰 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_subtitle"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- 첫 번째 버튼 양식 -->
+            <LinearLayout
+                android:id="@+id/Hbutton1"
+                style="@style/StandardButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"> <!-- 버튼 사이 패딩 추가 -->
+
+                <ImageView
+                    android:id="@+id/medicineImage1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_gravity="center"
+                    style="@style/StandardButtonImage" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/medicineText1"
+                        style="@style/StandardButtonText"
+                        android:text="두통약"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/medicineDescription1_1"
+                        style="@style/StandardButtonText"
+                        android:text="1. 두통약 테스트"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:id="@+id/medicineDescription1_2"
+                        style="@style/StandardButtonText"
+                        android:text="2. 두통약 테스트"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 두 번째 버튼 양식 -->
+            <LinearLayout
+                android:id="@+id/Hbutton2"
+                style="@style/StandardButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"> <!-- 버튼 사이 패딩 추가 -->
+
+                <ImageView
+                    android:id="@+id/medicineImage2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_gravity="center"
+                    style="@style/StandardButtonImage" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/medicineText2"
+                        style="@style/StandardButtonText"
+                        android:text="감기약 A"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/medicineDescription2_1"
+                        style="@style/StandardButtonText"
+                        android:text="1. 감기약 테스트"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:id="@+id/medicineDescription2_2"
+                        style="@style/StandardButtonText"
+                        android:text="2. 감기약 테스트"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 세 번째 버튼 양식 -->
+            <LinearLayout
+                android:id="@+id/Hbutton3"
+                style="@style/StandardButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"> <!-- 버튼 사이 패딩 추가 -->
+
+                <ImageView
+                    android:id="@+id/medicineImage3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_gravity="center"
+                    style="@style/StandardButtonImage" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/medicineText3"
+                        style="@style/StandardButtonText"
+                        android:text="감기약 B"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/medicineDescription3_1"
+                        style="@style/StandardButtonText"
+                        android:text="1. 감기약 테스트"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:id="@+id/medicineDescription3_2"
+                        style="@style/StandardButtonText"
+                        android:text="2. 감기약 테스트"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 네 번째 버튼 양식 -->
+            <LinearLayout
+                android:id="@+id/Hbutton4"
+                style="@style/StandardButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"> <!-- 버튼 사이 패딩 추가 -->
+
+                <ImageView
+                    android:id="@+id/medicineImage4"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_gravity="center"
+                    style="@style/StandardButtonImage" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/medicineText4"
+                        style="@style/StandardButtonText"
+                        android:text="감기약 A"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/medicineDescription4_1"
+                        style="@style/StandardButtonText"
+                        android:text="1. 감기약 테스트"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:id="@+id/medicineDescription4_2"
+                        style="@style/StandardButtonText"
+                        android:text="2. 감기약 테스트"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 다섯 번째 버튼 양식 -->
+            <LinearLayout
+                android:id="@+id/Hbutton5"
+                style="@style/StandardButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"> <!-- 버튼 사이 패딩 추가 -->
+
+                <ImageView
+                    android:id="@+id/medicineImage5"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_gravity="center"
+                    style="@style/StandardButtonImage" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/medicineText5"
+                        style="@style/StandardButtonText"
+                        android:text="감기약 A"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/medicineDescription5_1"
+                        style="@style/StandardButtonText"
+                        android:text="1. 감기약 테스트"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:id="@+id/medicineDescription5_2"
+                        style="@style/StandardButtonText"
+                        android:text="2. 감기약 테스트"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 두 번째 버튼 양식 -->
+            <LinearLayout
+                android:id="@+id/Hbutton6"
+                style="@style/StandardButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"> <!-- 버튼 사이 패딩 추가 -->
+
+                <ImageView
+                    android:id="@+id/medicineImage6"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_gravity="center"
+                    style="@style/StandardButtonImage" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/medicineText6"
+                        style="@style/StandardButtonText"
+                        android:text="감기약 A"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/medicineDescription6_1"
+                        style="@style/StandardButtonText"
+                        android:text="1. 감기약 테스트"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:id="@+id/medicineDescription6_2"
+                        style="@style/StandardButtonText"
+                        android:text="2. 감기약 테스트"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
