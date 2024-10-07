@@ -14,6 +14,6 @@ public class bottom_navFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // Inflate your fragment layout here
-        return inflater.inflate(R.layout.app_bar_main, container, false);
+        return inflater.inflate(R.layout.activity_main, container, false);
     }
 }
