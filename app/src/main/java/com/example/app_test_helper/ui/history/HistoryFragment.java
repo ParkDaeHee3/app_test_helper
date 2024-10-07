@@ -23,8 +23,6 @@ import com.example.app_test_helper.databinding.FragmentHistoryBinding;
             binding = FragmentHistoryBinding.inflate(inflater, container, false);
             View root = binding.getRoot();
 
-            final TextView textView = binding.textHistory;
-            historyViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
             return root;
         }
 
