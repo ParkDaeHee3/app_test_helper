@@ -3,66 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/nav_home">
 
-    <!-- 스플래쉬 화면 (앱 시작 시 가장 먼저 표시) -->
-    <fragment
-        android:id="@+id/splashFragment"
-        android:name="com.example.app_test_helper.ui.splash.splashFragment"
-        android:label="splash_fragment"
-        tools:layout="@layout/fragment_splash_screen" >
-        <!-- splashFragment에서 mainFragment로 이동하는 액션을 추가 -->
-        <action
-            android:id="@+id/action_splashFragment_to_nav_home"
-            app:destination="@id/nav_home" />
-    </fragment>
-
-    <!-- 홈 화면 -->
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.app_test_helper.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <!-- 히스토리 화면 -->
     <fragment
         android:id="@+id/nav_history"
         android:name="com.example.app_test_helper.ui.history.HistoryFragment"
         android:label="@string/menu_history"
         tools:layout="@layout/fragment_history" />
 
-    <!-- 알림 화면 -->
     <fragment
         android:id="@+id/nav_notifications"
         android:name="com.example.app_test_helper.ui.notifications.notificationsFragment"
         android:label="@string/menu_notifications"
-        tools:layout="@layout/fragment_notifications_list" >
-        <!-- notificationsFragment에서 notificationsSetFragment로 이동하는 액션 추가 -->
+        tools:layout="@layout/fragment_notifications_list">
         <action
             android:id="@+id/action_notificationsFragment_to_notificationsSetFragment"
             app:destination="@id/nav_notifications_set" />
     </fragment>
 
-    <!-- 알림 설정 화면 -->
     <fragment
         android:id="@+id/nav_notifications_set"
         android:name="com.example.app_test_helper.ui.notifications.notificationsSetFragment"
         android:label="Notifications Set"
         tools:layout="@layout/fragment_notifications_set" />
 
-    <!-- 지도 화면 -->
     <fragment
         android:id="@+id/nav_map"
         android:name="com.example.app_test_helper.ui.map.PharmacyFragment"
         android:label="@string/menu_map"
         tools:layout="@layout/fragment_pharmacy" />
 
-    <!-- 로그인 화면 -->
     <fragment
         android:id="@+id/nav_login"
         android:name="com.example.app_test_helper.ui.login.LoginFragment"
         android:label="@string/login_text"
         tools:layout="@layout/fragment_login" />
 </navigation>
+
 
 

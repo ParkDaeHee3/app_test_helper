@@ -23,16 +23,22 @@
         <!-- Kakao SDK 메타데이터 -->
         <meta-data android:name="com.kakao.sdk.AppKey" android:value="551a771174283caee21621fbf71f4741"/>
 
-        <!-- MainActivity 설정, 앱 시작 시 splashFragment 표시 -->
+        <!-- SplashActivity 설정 (android:exported 추가) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.splash.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.App_test_helper.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- MainActivity 정의 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.App_test_helper.NoActionBar" />
     </application>
 </manifest>
 
