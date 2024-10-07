@@ -12,31 +12,39 @@ import androidx.navigation.Navigation;
 
 import com.example.app_test_helper.databinding.FragmentNotificationsSetBinding;
 
-// 알림 설정 화면을 위한 Fragment 클래스
 public class notificationsSetFragment extends Fragment {
 
-    // 뷰 바인딩 객체
     private FragmentNotificationsSetBinding binding;
 
-    // Fragment 뷰 생성
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // ViewModel 초기화
-        notificationsSetViewModel notificationsSetViewModel = new ViewModelProvider(this).get(notificationsSetViewModel.class);
-
-        // 뷰 바인딩 설정
+        notificationsSetViewModel notificationsSetViewModel = new ViewModelProvider(requireActivity()).get(notificationsSetViewModel.class);
         binding = FragmentNotificationsSetBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        // 알림 설정 화면에서 필요한 추가 동작 구현 (예: 설정 데이터 표시)
+        binding.btnset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String text = binding.editText.getText().toString();
+                int hour = binding.timepicker.getHour();
+                int minute = binding.timepicker.getMinute();
+
+                String time = String.format("%02d:%02d", hour, minute);
+                String notification = text + " - " + time;
+
+                notificationsSetViewModel.addNotification(notification);
+
+                Navigation.findNavController(view).navigateUp();
+            }
+        });
 
         return root;
     }
 
-    // 뷰 해제 시 바인딩 객체 정리
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }
 }
+
