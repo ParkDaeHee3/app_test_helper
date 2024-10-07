@@ -14,6 +14,19 @@
         <item name="android:focusable">true</item> <!-- 포커스 가능 설정 -->
     </style>
 
+    <!-- fragment_history의 표준 버튼 -->
+    <style name="HistoryButtonLayout">
+        <item name="android:layout_width">match_parent</item> <!-- 전체 너비 사용 -->
+        <item name="android:layout_height">wrap_content</item> <!-- 내용에 맞게 높이 설정 -->
+        <item name="android:layout_marginStart">48dp</item> <!-- 시작 마진 48dp -->
+        <item name="android:layout_marginEnd">48dp</item> <!-- 끝 마진 48dp -->
+        <item name="android:padding">16dp</item> <!-- 내부 패딩 16dp -->
+        <item name="android:orientation">horizontal</item> <!-- 수평 배치 -->
+        <item name="android:gravity">center_vertical</item> <!-- 수직 중앙 정렬 -->
+        <item name="android:background">@color/sub_side_blue</item> <!-- 버튼 배경 색상 -->
+        <item name="android:focusable">true</item> <!-- 포커스 가능 설정 -->
+    </style>
+
     <!-- TextView 스타일 -->
     <style name="StandardButtonText">
         <item name="android:layout_width">wrap_content</item>
@@ -31,6 +44,17 @@
         <item name="android:layout_marginEnd">32dp</item> <!-- 끝 마진 32dp -->
         <item name="android:layout_gravity">center</item> <!-- 중앙 정렬 -->
         <item name="android:src">@drawable/medicinexml</item> <!-- 기본 이미지 설정 -->
+        <item name="android:background">@color/sub_title_blue</item> <!-- 배경 색상 설정 -->
+    </style>
+
+    <!-- fragment_history 아이콘 스타일 -->
+    <style name="HistoryButtonImage">
+        <item name="android:layout_width">48dp</item> <!-- 이미지 크기 고정 -->
+        <item name="android:layout_height">48dp</item> <!-- 이미지 크기 고정 -->
+        <item name="android:layout_marginStart">32dp</item> <!-- 시작 마진 32dp -->
+        <item name="android:layout_marginEnd">32dp</item> <!-- 끝 마진 32dp -->
+        <item name="android:layout_gravity">center</item> <!-- 중앙 정렬 -->
+        <item name="android:src">@drawable/ic_menu_medicine</item> <!-- 기본 이미지 설정 -->
         <item name="android:background">@color/sub_title_blue</item> <!-- 배경 색상 설정 -->
     </style>
 </resources>

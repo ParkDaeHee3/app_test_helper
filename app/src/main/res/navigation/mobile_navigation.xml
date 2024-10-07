@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
@@ -21,15 +21,12 @@
         android:id="@+id/nav_notifications"
         android:name="com.example.app_test_helper.ui.notifications.notificationsFragment"
         android:label="@string/menu_notifications"
-        tools:layout="@layout/fragment_notifications_list" >
-
-        <!-- notificationsFragment에서 notificationsSetFragment로 이동하는 액션 추가 -->
+        tools:layout="@layout/fragment_notifications_list">
         <action
             android:id="@+id/action_notificationsFragment_to_notificationsSetFragment"
             app:destination="@id/nav_notifications_set" />
     </fragment>
 
-    <!-- notificationsSetFragment 정의 추가 -->
     <fragment
         android:id="@+id/nav_notifications_set"
         android:name="com.example.app_test_helper.ui.notifications.notificationsSetFragment"
@@ -42,10 +39,12 @@
         android:label="@string/menu_map"
         tools:layout="@layout/fragment_pharmacy" />
 
-    <!-- LoginFragment 추가 -->
     <fragment
         android:id="@+id/nav_login"
         android:name="com.example.app_test_helper.ui.login.LoginFragment"
         android:label="@string/login_text"
         tools:layout="@layout/fragment_login" />
 </navigation>
+
+
+
