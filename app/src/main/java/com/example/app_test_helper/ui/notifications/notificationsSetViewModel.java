@@ -4,20 +4,44 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-// 알림 설정 화면의 ViewModel 클래스
+import java.util.ArrayList;
+import java.util.List;
+
 public class notificationsSetViewModel extends ViewModel {
 
-    // 설정 데이터를 저장하는 MutableLiveData
     private final MutableLiveData<String> mText;
+    private final MutableLiveData<List<String>> notificationsList;
 
-    // 생성자에서 기본 설정 데이터 초기화
     public notificationsSetViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is the set notification fragment");
+
+        // 알림 데이터를 저장할 리스트 초기화
+        notificationsList = new MutableLiveData<>(new ArrayList<>());
     }
 
-    // 설정 데이터를 반환하는 메서드
     public LiveData<String> getText() {
         return mText;
+    }
+
+    public LiveData<List<String>> getNotificationsList() {
+        return notificationsList;
+    }
+
+    public void addNotification(String notification) {
+        List<String> currentList = notificationsList.getValue();
+        if (currentList != null) {
+            currentList.add(notification);
+            notificationsList.setValue(currentList);
+        }
+    }
+
+    // 항목 삭제 메서드 추가
+    public void removeNotification(String notification) {
+        List<String> currentList = notificationsList.getValue();
+        if (currentList != null) {
+            currentList.remove(notification);
+            notificationsList.setValue(currentList);
+        }
     }
 }
