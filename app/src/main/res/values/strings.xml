@@ -41,6 +41,7 @@
     <string name="content_page_subtitle_text_1">어디가 아픈가요?</string>
     <string name="content_page_subtitle_text_2">여기엔 이게 도움이 될거에요</string>
     <string name="content_page_subtitle_text_3">내 근처 이곳에 있어요</string>
+    <string name="content_page_subtitle_text_4">히스토리 페이지</string>
 
     <!--[login_page 문자열]-->
     <string name="login_text">Login</string>
