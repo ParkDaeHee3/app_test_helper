@@ -30,6 +30,14 @@ import com.kakao.vectormap.label.LabelTextBuilder;
 import com.kakao.vectormap.label.LabelTextStyle;
 import com.kakao.vectormap.label.LabelTransition;
 
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class mapFragment extends Fragment {
 
     private FragmentMapBinding binding;
@@ -39,20 +47,13 @@ public class mapFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://222.236.2.214:8080/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
         binding = FragmentMapBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
-//        View v = inflater.inflate(R.layout.fragment_map, container, false);
-
-        //지도
-//        MapView mapView = new MapView(getActivity());
-//        ViewGroup mapViewContainer = (ViewGroup) v.findViewById(R.id.map_view);
-//        mapViewContainer.addView(mapView);
-
-//        Retrofit retrofit = new Retrofit.Builder()
-//                .baseUrl("http://222.236.2.214:8080/")
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build();
 
         mapView = binding.mapView;
         mapView.start(new MapLifeCycleCallback() {
@@ -76,7 +77,9 @@ public class mapFragment extends Fragment {
                 CameraUpdate cameraUpdate = CameraUpdateFactory.newCenterPosition(LatLng.from(35.963727, 126.959107));
                 kakaoMap.moveCamera(cameraUpdate);
 
-                LabelStyle style = LabelStyle.from(R.drawable.ic_map_pin).setTextStyles(LabelTextStyle.from(37, Color.parseColor("#DB5461"),2, Color.DKGRAY)).setApplyDpScale(false);
+                LabelStyle style = LabelStyle.from(R.drawable.ic_map_pin)
+                        .setTextStyles(LabelTextStyle.from(37, Color.parseColor("#DB5461"),2, Color.DKGRAY))
+                        .setApplyDpScale(true);
 
 // 2. LabelOptions 생성하기
                 LabelTextBuilder labelTextBuilder = new LabelTextBuilder();
@@ -90,40 +93,36 @@ public class mapFragment extends Fragment {
 // 4. LabelLayer 에 LabelOptions 을 넣어 Label 생성하기
                 Label label = layer.addLabel(options);
 
-//                RestApi restApi = retrofit.create(RestApi.class);
-//                Call<List<map>> call = restApi.getMap();
-//                call.enqueue(new Callback<List<map>>() {
-//                    @Override
-//                    public void onResponse(Call<List<map>> call, Response<List<map>> response) {
-//                        List<map> res = response.body();
-//                        double lat;
-//                        double lon;
-//                        for (map mm : res) {
-//                            lat = mm.getLat();
-//                            lon = mm.getLon();
-//                            Log.d("abcd", "Response: " + lat + "  b: " + lon);
-//                            LabelStyles styles = kakaoMap.getLabelManager()
-//                                    .addLabelStyles(LabelStyles.from(LabelStyle.from(R.drawable.mark)));
-//
-//                            LabelStyle style = LabelStyle.from(R.drawable.mark).setApplyDpScale(true);
-//// 2. LabelOptions 생성하기
-//                            LabelOptions options = LabelOptions.from(LatLng.from(lat,lon))
-//                                    .setStyles(style);
-//
-//// 3. LabelLayer 가져오기 (또는 커스텀 Layer 생성)
-//                            LabelLayer layer = kakaoMap.getLabelManager().getLayer();
-//
-//// 4. LabelLayer 에 LabelOptions 을 넣어 Label 생성하기
-//                            Label label = layer.addLabel(options);
-//                        }
-//
-//                    }
+                RestApi restApi = retrofit.create(RestApi.class);
+                Call<List<map>> call = restApi.getMap();
+                call.enqueue(new Callback<List<map>>() {
+                    @Override
+                    public void onResponse(Call<List<map>> call, Response<List<map>> response) {
+                        List<map> res = response.body();
+                        double lat;
+                        double lon;
+                        for (map mm : res) {
+                            lat = mm.getLat();
+                            lon = mm.getLon();
+                            Log.d("abcd", "Response: " + lat + "  b: " + lon);
+                            Log.d("abcde", mm.toString());
 
-//                    @Override
-//                    public void onFailure(Call<List<map>> call, Throwable t) {
-//
-//                    }
-//                });
+                            LabelStyle style = LabelStyle.from(R.drawable.ic_map_pin).setApplyDpScale(true);
+// 2. LabelOptions 생성하기
+                            LabelOptions options = LabelOptions.from(LatLng.from(lat,lon))
+                                    .setStyles(style);
+
+// 4. LabelLayer 에 LabelOptions 을 넣어 Label 생성하기
+                            Label label = layer.addLabel(options);
+                        }
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<map>> call, Throwable t) {
+                        Log.d("abcde", t.toString());
+                    }
+                });
             }
         });
 
