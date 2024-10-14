@@ -24,8 +24,20 @@
         <color name="white">#FFFFFFFF</color>
 
        <!--로그인-->
-        <color name="purple">#8692f7</color>
+        <color name="purple">#8692f7</color>s
         <color name="black">#FF000000</color>
+
+       <!--알림 색상 -->
+    <color name="alarm_yellow">#fab005</color>
+
+
+       <!-- 경고 색상 -->
+    <color name="warning_orange">#d9480f</color>
+
+         <!-- 전체 데마 색상 -->
+    <color name="main_lime2">#d8f5a2</color>
+    <color name="main_lime3">#c0eb75</color>
+    <color name="main_lime4">#a9e34b</color>
 
 
 

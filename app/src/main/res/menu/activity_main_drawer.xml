@@ -24,5 +24,9 @@
             android:id="@+id/nav_login"
             android:icon="@drawable/ic_menu_login"
             android:title="@string/login_text"/>
+        <item
+            android:id="@+id/nav_signup"
+            android:icon="@drawable/ic_menu_signup"
+            android:title="@string/signup2_text"/>
     </group>
 </menu>
