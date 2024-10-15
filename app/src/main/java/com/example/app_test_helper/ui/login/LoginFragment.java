@@ -11,10 +11,17 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.app_test_helper.R;
+import com.example.app_test_helper.databinding.FragmentLoginBinding;
+import com.example.app_test_helper.ui.signup.SignupFragment;
+
+
 
 public class LoginFragment extends Fragment {
+
+    private FragmentLoginBinding binding; // login_signup_button 기능
 
     EditText username;
     EditText password;
@@ -24,6 +31,10 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // Inflate the fragment's layout (replace 'R.layout.fragment_login' with your actual layout)
+
+        binding = FragmentLoginBinding.inflate(inflater, container, false); // login_signup_button 기능
+        View root = binding.getRoot();   // login_signup_button 기능
+
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
         // Find views inside the fragment layout
@@ -43,7 +54,27 @@ public class LoginFragment extends Fragment {
             }
         });
 
-        return view; // Return the created view for the fragment
+        // login page에 있는 signup button 기능
+       Button loginSignupButton = binding.loginSignupButton;
+        loginSignupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             FragmentTransaction transaction = getActivity().getSupportFragmentManager()
+                     .beginTransaction().addToBackStack(null);
+
+              SignupFragment signupFragment = new SignupFragment();
+             //main_layout에 homeFragment로 transaction 한다.
+             transaction.replace(R.id.fragment_container, signupFragment);
+             //꼭 commit을 해줘야 바뀐다.
+             transaction.commit();
+                       }
+                   });
+
+       return view; // Return the created view for the fragment
+
     }
+
+
+
 }
 
